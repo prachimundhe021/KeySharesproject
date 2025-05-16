@@ -12,17 +12,15 @@ KeySharesproject/
 
 ## 🚀 Features
 
-### 👤 User Side:
-- Register & log in securely
-- Browse available rooms with images and details
-- View seller information
-- Book or express interest in rooms
-
-### 🧑‍💼 Seller Side:
-- Register & log in securely
-- Add or update room details
-- Upload images and set pricing
-- View and manage listed rooms
+### 👤 User Dashboard:
+✅ **Easy Login & Signup:** Securely register, log in, and manage your account.
+✅ **User Roles:** Choose to be a Room Lister (Admin) or a Room Seeker (Buyer).
+✅ **List a Room (Room Lister):** A user can add a room for rent, but only one listing is allowed until they move out.
+✅ **Find a Room (Room Seeker):** Explore available rental spaces listed by other users.
+✅ **Room Details:** View complete information about the room and its lister before making a decision.
+✅ **Find a Roommate:** Connect with people looking for shared accommodation.
+✅ **Search by Location:** Filter rooms based on location.
+✅ **Manage Listings:** Room Listers can update, edit, or remove their own room listing.
 
 ---
 
