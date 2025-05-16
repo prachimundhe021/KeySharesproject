@@ -1,0 +1,206 @@
+<app-navbar></app-navbar>
+
+<!-- Landing Page -->
+<div class="home" id="home">
+
+    <!-- Home Center Page -->
+    <div class="home-page">
+        <br><br><br><br><br><br><br><br>
+        <div class="trusted-banner">Trusted & loved by million users</div>
+        <h1>Find Your Ideal Room<br><span class="keyShares">Key Shares!</span></h1>
+        <p>Share your room with the right Key Shares</p>
+        <form class="search-form">
+            <input type="text" placeholder="Search Places..." />
+            <button (click)="onClickSearch()" type="submit">Search</button>
+        </form>
+        <div class="topCities">
+            <p>Top Cities: <a href="#">Bangalore,</a> <a href="#">Pune,</a> <a href="#">Kota,</a> <span>></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Home Page Image -->
+    <div class="bgImgDiv">
+        <div class="imgDiv">
+            <img src="Bg1.png" alt="Background Image" width="100%" height="100%">
+            <!--  width="100%" height="100%" -->
+        </div>
+    </div>
+
+    <!-- Rental Aggrement Text & Image -->
+    <div class="easilyRental">
+        <div class="rentalText">
+            <h1>Getting Without Rental Agreement<br>made Easy, Quick & Affordable <br>to <span
+                    class="keySharesPartners">Key
+                    Shares
+                    Partners</span>😃</h1>
+            <p>Lowest Price Guaranteed!! Search Rooms or<br> Flatmates for Avail Benefits</p>
+            <form class="searchRentalText">
+                <button (click)="onClickSearch()" type="submit">Search Now></button>
+            </form>
+        </div>
+        <div class="rentalImage">
+            <img src="rentalImage.png" alt="Rental Image" width="100%" height="100%">
+        </div>
+    </div>
+
+    <!-- Popular Cities Section -->
+    <div class="popular-cities">
+        <h2>View rooms in Popular Cities</h2>
+        <div class="cities-grid">
+            <div class="city-card">
+                <img src="delhi.jpeg" alt="Delhi">
+                <div class="city-name">DELHI</div>
+            </div>
+            <div class="city-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREYptjEbWLtO635FNcLs4WiOByAZ7ZKVNl8A&s"
+                    alt="Mumbai">
+                <div class="city-name">MUMBAI</div>
+            </div>
+            <div class="city-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBlBe85h_QcdjbYeTR1tw1u09M0zavka9r3A&s"
+                    alt="Noida">
+                <div class="city-name">NOIDA</div>
+            </div>
+
+            <div class="city-card">
+                <img src="https://img.icons8.com/?size=512w&id=9xflPvS4vNYs&format=png" alt="Delhi">
+                <div class="city-name">KOLKATA</div>
+            </div>
+            <div class="city-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/17481/17481080.png" alt="Mumbai">
+                <div class="city-name">HYDERABAD</div>
+            </div>
+            <div class="city-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ZN70_AUxmm3xMggUsx0EyuJIrdDyXx5OMQ&s"
+                    alt="Noida">
+                <div class="city-name">PUNE</div>
+            </div>
+
+        </div>
+        <button (click)="onClickSearch()" class="view-all">View All Cities ></button>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="bodyDivTestimonial" id="testimonials">
+        <div class="testimonials-section">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"KeyShares made finding a shared apartment in Pune effortless! The platform is user-friendly
+                            and
+                            reliable."</p>
+                        <span>- Sanket Parbat</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The best flatmate matching experience I've ever had. Found the perfect flatmate in
+                            Bangalore!"
+                        </p>
+                        <span>- Sakshi Kharat</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Thanks to KeyShares, settling in Delhi was smooth and stress-free. Amazing service!"</p>
+                        <span>- Wadnere Abhishek</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Highly recommend KeyShares! Found an amazing place in Mumbai without hassle."</p>
+                        <span>- Kiran Thakare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us -->
+    <div class="aboutUs" id="aboutUs">
+        <h2>Meet Our Team</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrmvSoqEMvs4E-TIgyfMdztZYEdKav-zok1A&s"
+                        alt="Team Member 1">
+                </div>
+                <h3>Garvit Jain</h3>
+                <p>Passionate Software Engineer with expertise in Java, Web Technologies, and SQL. Dedicated Backend
+                    Developer and Always eager to learn and innovate!.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPRQ6LprnPzvvP-_vVO_nhSokwda8CMsnwQ&s"
+                        alt="Team Member 2">
+                </div>
+                <h3>Vaishnavi Kakade</h3>
+                <p>Creative in Web design and animation, bringing creative solutions to the team. Focused on
+                    precision and innovation to user-friendly solutions.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPRQ6LprnPzvvP-_vVO_nhSokwda8CMsnwQ&s"
+                        alt="Team Member 3">
+                </div>
+                <h3>Prachi Mundhe</h3>
+                <p>Creative Frontend Developer who loves crafting beautiful, user-friendly websites and seamless user
+                    experiences or contributes valuable skills in projects.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="contactUs" id="contactUs">
+        <h2>Connect With Us</h2>
+        <div class="contact">
+
+            <div class="contactImg">
+                <img src="ContactUs.jpeg" alt="Rental Image" width="100%" height="100%">
+            </div>
+
+            <div class="contact-section">
+                <form class="contact-form" method="post" action="mailto:jaingarvit945@email.com" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>What is your query about?</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="query" value="add_property" required>
+                                Adding a Property
+                            </label>
+                            <label>
+                                <input type="radio" name="query" value="rent_property" required>
+                                Renting a Property
+                            </label>
+                            <label>
+                                <input type="radio" name="query" value="other_query" required>
+                                Other Query
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="5"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

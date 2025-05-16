@@ -1,0 +1,29 @@
+<div class="loginRegiBody">
+
+    <div class="loginRegi">
+
+        <div class="loginContainer">
+            <div class="login-regi-container">
+                <div class="login-container">
+                    <h2>Images</h2>
+                    <form [formGroup]="imageForm" (ngSubmit)="onClickUpdateImageInformation()">
+                        <input type="text" formControlName="imageLink1" placeholder="Enter Image Link 1">
+                        <input type="text" formControlName="imageLink2" placeholder="Enter Image Link 2">
+                        <input type="text" formControlName="imageLink3" placeholder="Enter Image Link 3">
+                        <input type="text" formControlName="imageLink4" placeholder="Enter Image Link 4">
+                        <button [disabled]="imageForm.invalid" class="submit" type="submit">Submit</button>
+                    </form>
+                    <br>
+                    <!-- <button routerLink="/home" class="submit" type="submit">Show Data</button> -->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="loginRegiImage">
+            <img src="imagesBg.png" alt="LoginRegiImage">
+        </div>
+
+    </div>
+
+</div>

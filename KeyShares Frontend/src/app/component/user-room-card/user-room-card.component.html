@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+    <div class="filtersBg">
+        <div class="filters">
+            <h3>Filters</h3>
+            <form>
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType">
+                    <option value="room">Room</option>
+                    <option value="flat">Flat</option>
+                </select>
+
+                <label for="priceRange">Price Range</label>
+                <select id="priceRange">
+                    <option value="4000">Less than 4000</option>
+                    <option value="6000">Less than 6000</option>
+                    <option value="7000">Less than 7000</option>
+                </select>
+
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter City">
+
+                <label for="foodAllowed">Food Allowed</label>
+                <select id="foodAllowed">
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="nonveg">Non-Vegetarian</option>
+                    <option value="both">Both</option>
+                </select>
+
+                <label for="personType">Profession</label>
+                <select id="personType">
+                    <option value="student">Student</option>
+                    <option value="salaried">Salaried</option>
+                    <option value="intern">Intern</option>
+                </select>
+
+                <label for="coolingType">Cooling Type</label>
+                <select id="coolingType">
+                    <option value="ac">AC</option>
+                    <option value="cooler">Cooler</option>
+                    <option value="non-ac">NON AC</option>
+                </select>
+
+                <button type="submit" class="apply-filters-btn">Apply Filters</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="roomDisplayBg">
+        <!-- <img src="UserDisplay.png" alt="User Bg" width="100%" height="100%"> -->
+    </div>
+
+    <div class="room-display">
+
+        <!-- Room Card -->
+        <!-- <div class="room-card">
+            <a class="roomLinker" href="#">
+                <div class="roomCardImg">
+                    <img src="https://img.freepik.com/premium-vector/village-vector-8_560147-1973.jpg?ga=GA1.1.631935998.1734073976&semt=ais_hybrid"
+                        alt="Room Image" />
+                </div>
+                <div class="roomCardInformation">
+                    <h4>Garvit Jain</h4>
+                    <p><strong>Location:</strong> Pune</p>
+                    <p><strong>Property Type:</strong> Room</p>
+                    <p><strong>Capacity:</strong> 4 Persons</p>
+                    <p><strong>Avaliable:</strong> Yes</p>
+                    <p class="rent"><strong>Rent:</strong> ₹6500</p>
+                </div>
+            </a>
+            <div class="roomCardButtons">
+                <button class="submit">Submit</button>
+                <button class="submit">Enquire Now</button>
+            </div>
+        </div> -->
+
+
+        <div class="room-card" *ngFor="let information of allInformation">
+            <a class="roomLinker" (click)="onClickLogin()">
+                <div class="roomCardImg">
+                    <img src="{{information.imagesLinks.imageLink1}}" alt="Room Image" />
+                </div>
+                <div class="roomCardInformation">
+                    <h4>{{information.sellerInformation.sellerName}}</h4>
+                    <p><strong>Location:</strong> {{information.city}}</p>
+                    <p><strong>Property Type:</strong> {{information.roomType}}</p>
+                    <p><strong>Capacity:</strong> {{information.overallCapacity}} Persons</p>
+                    <p><strong>Avaliable:</strong> {{information.spaceAvailable}}</p>
+                    <p class="rent"><strong>Rent:</strong> ₹{{information.rentPerHead}}</p>
+                </div>
+            </a>
+            <div class="roomCardButtons">
+                <button (click)="onClickViewDetails(information.roomId)" class="submit">View Details</button>
+                <button (click)="onClickEnquireNow($event,information.sellerInformation.mobileNumber)"
+                    class="submit">Enquire Now</button>
+            </div>
+        </div>
+    </div>
+
+</div>

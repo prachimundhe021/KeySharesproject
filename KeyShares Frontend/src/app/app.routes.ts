@@ -1,0 +1,30 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { RegisterComponent } from './component/register/register.component';
+import { RoomInformationComponent } from './component/room-information/room-information.component';
+import { SellerInformationComponent } from './component/seller-information/seller-information.component';
+import { ImageDataComponent } from './component/image-data/image-data.component';
+import { SellerRoomAllInfromationComponent } from './component/seller-room-all-infromation/seller-room-all-infromation.component';
+import { UserRoomCardComponent } from './component/user-room-card/user-room-card.component';
+import { UserRoomAllInformationComponent } from './component/user-room-all-information/user-room-all-information.component';
+import { UpdateImageLinksInformationComponent } from './component/update-image-links-information/update-image-links-information.component';
+import { UpdateRoomInformationComponent } from './component/update-room-information/update-room-information.component';
+import { UpdateSellerInfromationComponent } from './component/update-seller-infromation/update-seller-infromation.component';
+
+export const routes: Routes = [
+    { path: '', component: HomeComponent },
+    { path: 'home', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: 'roomInform', component: RoomInformationComponent },
+    { path: 'sellerInform', component: SellerInformationComponent },
+    { path: 'roomInform', component: RoomInformationComponent },
+    { path: 'images/:roomId', component: ImageDataComponent },
+    { path: 'sellerRoomDescription/:roomId', component: SellerRoomAllInfromationComponent },
+    { path: 'userRoomCard', component: UserRoomCardComponent },
+    { path: 'userRoomAllInform/:roomId', component: UserRoomAllInformationComponent },
+    { path: 'updateSellerInformation', component: UpdateSellerInfromationComponent },
+    { path: 'updateRoomInformation', component: UpdateRoomInformationComponent },
+    { path: 'updateImageLinks/:roomId', component: UpdateImageLinksInformationComponent },
+];

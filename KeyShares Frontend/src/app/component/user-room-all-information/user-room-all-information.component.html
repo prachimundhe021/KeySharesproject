@@ -1,0 +1,61 @@
+<div class="host">
+    <div class="room-information">
+        <div class="room-summary">
+            <h2>Seller or Room Description</h2>
+
+            <div class="room-container">
+
+                <div class="imgDivScroll">
+                    <div class="scroll-container">
+                        <img src="{{information.imagesLinks.imageLink1}}" alt="">
+                        <img src="{{information.imagesLinks.imageLink2}}" alt="">
+                        <img src="{{information.imagesLinks.imageLink3}}" alt="">
+                        <img src="{{information.imagesLinks.imageLink4}}" alt="">
+                    </div>
+                </div>
+
+                <div class="room-details">
+                    <div class="leftSide-room-details">
+                        <p><strong>Seller Information</strong></p>
+                        <div class="sellerAvatar">
+                            <img src="sellerAvatar.png" alt="Seller Avatar" width="100%" height="100%">
+                        </div>
+                        <p><strong>Seller ID:</strong> {{information.sellerInformation.sellerId}}</p>
+                        <p><strong>Seller Name:</strong> {{information.sellerInformation.sellerName}}</p>
+                        <p><strong>Email ID:</strong> {{information.sellerInformation.emailId}}</p>
+                        <p><strong>Contact Number:</strong> {{information.sellerInformation.mobileNumber}}</p>
+                        <p><strong>Seller City:</strong> {{information.sellerInformation.city}}</p>
+                        <p><strong>Age:</strong> {{information.sellerInformation.age}}</p>
+                        <p><strong>Profession:</strong> {{information.sellerInformation.profession}}</p>
+                        <p><strong>Meal Type:</strong> {{information.sellerInformation.mealType}}</p>
+                    </div>
+
+                    <div class="rightSide-room-details">
+                        <p><strong>Property Type:</strong> {{information.roomType}}</p>
+                        <p><strong>Room Address:</strong> {{information.address}}</p>
+                        <p><strong>Room City:</strong> {{information.city}}</p>
+                        <p><strong>Cooling Type:</strong> {{information.coolingType}}</p>
+                        <p><strong>Food Allowed:</strong> {{information.foodAllowed}}</p>
+                        <p><strong>Extra Facilities:</strong> {{information.facilities}}</p>
+
+                        <p><strong>Overall Capacity:</strong> {{information.overallCapacity}} Persons
+                        </p>
+                        <p><strong>Already Filled:</strong> {{information.alreadyFilled}} Persons</p>
+                        <p><strong>Space Available:</strong> {{information.spaceAvailable}}</p>
+                        <p><strong>Overall Rent + Light Bill:</strong> {{information.overallRent}}</p>
+                        <p><strong>Security Deposit:</strong> {{information.securityDeposit}}</p>
+                        <p><strong>Rent Per Head:</strong> {{information.rentPerHead}}</p>
+                    </div>
+                </div>
+
+                <div class="controlButtons">
+                    <button (click)="onClickEnquireNow($event,information.sellerInformation.mobileNumber)"
+                        class="submit" type="submit">Enquire Now</button>
+                    <button (click)="onClickBack()" class="submit" type="submit">Back</button>
+                    <!-- <button (click)="onClickLogout()" class="danger" type="submit">LogOut</button> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

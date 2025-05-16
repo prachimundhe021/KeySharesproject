@@ -1,0 +1,255 @@
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1350px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin: 0 auto; */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filtersBg {
+    width: 22%;
+    height: 100%;
+    background: #fdffde;
+    position: fixed;
+    border-right: 4px solid black;
+    margin-left: 0.04%;
+}
+
+.filters {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filters h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 14px;
+    font-size: 1.5rem;
+    color: #1f2937;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.filters form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.filters label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #1f2937;
+}
+
+.filters select {
+    width: 87%;
+    padding: 12px;
+    border: 1px solid #1f2937;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.filters input {
+    width: 78%;
+    padding: 12px;
+    border: 1px solid #1f2937;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.filters select,
+input:focus {
+    transition: all 0.3s ease-in-out;
+    border-color: #1f2937;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.apply-filters-btn {
+    background-color: #1f2937;
+    color: #fdffde;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: -5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.4s ease, box-shadow 0.3s ease;
+}
+
+.apply-filters-btn:hover {
+    background-color: #fdffde;
+    color: #1f2937;
+    border: 1px solid #1f2937;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.roomDisplayBg {
+    width: 78%;
+    height: 643px;
+    margin-left: 22.15%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: #fdffde;
+    /* background-color: #28a745; */
+}
+
+.room-display {
+    width: 100%;
+    height: auto;
+    gap: 10%;
+    padding: 20px;
+    justify-items: center;
+    margin-top: 2.8%;
+    /* box-sizing: border-box; */
+    /* margin-bottom: -100px; */
+    /* margin-left: 28%; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
+}
+
+
+
+.room-card {
+    /* width: 100%;
+    height: 100%; */
+    width: 72%;
+    height: 185px;
+    display: flex;
+    margin-left: 23%;
+    margin-top: 2.5%;
+    /* background: #fdffde; */
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    animation: fadeIn 1s ease-in-out both;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s, opacity 0.4s ease-in-out;
+}
+
+.room-card:hover {
+    background-color: white;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.roomLinker {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.roomCardImg {
+    width: 45%;
+}
+
+.roomCardInformation {
+    width: 50%;
+    margin-left: 2%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.roomCardButtons {
+    width: 25%;
+    align-items: center;
+    margin: auto;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.roomCardImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.roomCardInformation h4 {
+    margin-top: 8px;
+    margin-left: 8%;
+    /* text-align: center; */
+    font-size: 17px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.roomCardInformation p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #343a40;
+    margin-left: 8%;
+}
+
+.roomCardInformation .rent {
+    margin-left: 7%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 5px;
+}
+
+.roomCardButtons .submit {
+    width: 90%;
+    padding: 13px;
+    border-radius: 25px;
+    font-size: 16.5px;
+    margin-top: 25px;
+    margin-left: 5%;
+    background-color: #1f2937;
+    color: #fdffde;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.roomCardButtons .submit:hover {
+    background-color: #fdffde;
+    color: #1f2937;
+    border: 1px solid #1f2937;
+    transform: scale(1.03);
+}

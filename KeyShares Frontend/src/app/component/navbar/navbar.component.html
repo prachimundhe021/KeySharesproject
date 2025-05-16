@@ -1,0 +1,31 @@
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="containerLogo">
+        <a href="#">
+            <img src="Logo2.png" alt="HomePage" width="100%" height="100%">
+        </a>
+    </div>
+    <div class="auth-buttons">
+        <a routerLink="/home"><button>Home</button></a>
+        <a href="#testimonials"><button>Testimonials</button></a>
+        <a href="#aboutUs"><button>About Us</button></a>
+        <a href="#contactUs"><button>Contact Us</button></a>
+        <a routerLink="/login" *ngIf="islogin"><button>Login / Register</button></a>
+        <!-- <a routerLink="/home" *ngIf="!islogin"><button>{{username}}</button></a> -->
+        <a (click)="logout()" *ngIf="!islogin"><button>{{username}}</button></a>
+        <!-- <div>
+            <ng-container *ngIf="username; else loginLink">
+                <div class="styled-select">
+                    <select id="log" name="category" (change)="onOptionChange($event.target.value)">
+                        <option [value]="'#'">{{ username }}</option>
+                        <option [value]="'logout'">Logout</option>
+                    </select>
+                </div>
+            </ng-container>
+
+            <ng-template #loginLink>
+                <a style="margin-right: 40px;" routerLink="/signin">Login</a>
+            </ng-template>
+        </div> -->
+    </div>
+</nav>

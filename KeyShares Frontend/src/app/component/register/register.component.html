@@ -1,0 +1,86 @@
+<!-- Register -->
+<div class="loginRegiBody">
+
+    <div class="loginRegi">
+
+        <div class="loginRegiImage">
+            <img src="registerLogin.jpeg" alt="LoginRegiImage">
+        </div>
+
+        <div class="loginContainer">
+            <button routerLink="/home" class="close-button">&times;</button>
+            <div class="login-regi-container">
+                <div class="login-container">
+                    <h2>Register</h2>
+                    <form [formGroup]="registerForm" (ngSubmit)="onClickRegister($event)">
+                        <input type="text" formControlName="userName" placeholder="Username">
+                        <div *ngIf="registerForm.get('userName')?.invalid && registerForm.get('userName')?.touched">
+                            <small *ngIf="registerForm.get('userName')?.errors?.['required']">Username is
+                                required.</small>
+                            <small *ngIf="registerForm.get('userName')?.errors?.['minLength']">Minimum Length is
+                                6</small>
+                            <small *ngIf="registerForm.get('userName')?.errors?.['pattern']">Pattern Ex:
+                                Sonu{{sign}}3</small>
+                        </div>
+
+                        <input type="email" formControlName="emailId" placeholder="Email">
+                        <div *ngIf="registerForm.get('emailId')?.invalid && registerForm.get('emailId')?.touched">
+                            <small *ngIf="registerForm.get('emailId')?.errors?.['required']">Email is
+                                required.</small>
+                            <small *ngIf="registerForm.get('emailId')?.errors?.['pattern']">Pattern Ex:
+                                sonu64{{sign}}gmail.com</small>
+                        </div>
+
+                        <div class="radio-container">
+                            <p>Gender:</p>
+
+                            <input type="radio" id="male" formControlName="gender" value="male" />
+                            <label style="margin-left: 10%;" for="male">Male</label>
+
+                            <input type="radio" id="female" formControlName="gender" value="female" />
+                            <label style="margin-left: 9%;" for="female">Female</label>
+                        </div>
+
+                        <input type="passWord" id="passWord" formControlName="passWord" placeholder="Password">
+                        <div *ngIf="registerForm.get('passWord')?.invalid && registerForm.get('passWord')?.touched">
+                            <small *ngIf="registerForm.get('passWord')?.errors?.['required']">Password is
+                                required.</small>
+                            <small *ngIf="registerForm.get('passWord')?.errors?.['minLength']">Minimum Length is
+                                6</small>
+                            <small *ngIf="registerForm.get('passWord')?.errors?.['pattern']">Pattern Ex:
+                                Gauri{{sign}}9</small>
+                        </div>
+
+                        <input type="password" formControlName="confirmPassword" placeholder="Confirm Password">
+                        <div
+                            *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched">
+                            <small *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm Password is
+                                required.</small>
+                            <small *ngIf="registerForm.get('confirmPassword')?.errors?.['minLength']">Minimum Length is
+                                6</small>
+                            <small *ngIf="registerForm.get('confirmPassword')?.errors?.['pattern']">Pattern Ex:
+                                Gauri{{sign}}9</small>
+
+                        </div>
+
+                        <div class="radio-container">
+                            <input type="radio" id="add_room" formControlName="role" value="seller">
+                            <label for="add_room">Add a Room/Flat</label>
+
+                            <input type="radio" id="rent_room" formControlName="role" value="buyer">
+                            <label for="rent_room">Rent a Room/Flat</label>
+                        </div>
+
+                        <button [disabled]="registerForm.invalid" class="submit" type="submit">Submit</button>
+                    </form>
+                    <br>
+                    <button routerLink="/login" class="ankerSubmit" type="submit">Already have an Account?
+                        Login Here</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,45 @@
+<!-- Login  -->
+<div class="loginRegiBody">
+
+    <div class="loginRegi">
+
+        <div class="loginRegiImage">
+            <img src="registerLogin.jpeg" alt="LoginRegiImage">
+        </div>
+
+        <div class="loginContainer">
+            <button routerLink="/home" class="close-button">&times;</button>
+            <div class="login-regi-container">
+                <div class="login-container">
+                    <h2>Login</h2>
+                    <form [formGroup]="loginForm" (ngSubmit)="onClickLogin($event)">
+                        <input type="email" formControlName="emailId" placeholder="Email">
+                        <div *ngIf="loginForm.get('emailId')?.invalid && loginForm.get('emailId')?.touched">
+                            <small *ngIf="loginForm.get('emailId')?.errors?.['required']">Email is
+                                required.</small>
+                            <small *ngIf="loginForm.get('emailId')?.errors?.['pattern']">Pattern Ex:
+                                sonu64{{sign}}gmail.com</small>
+                        </div>
+
+                        <input type="password" formControlName="passWord" placeholder="Password">
+                        <div *ngIf="loginForm.get('passWord')?.invalid && loginForm.get('passWord')?.touched">
+                            <small *ngIf="loginForm.get('passWord')?.errors?.['required']">Password is
+                                required.</small>
+                            <small *ngIf="loginForm.get('passWord')?.errors?.['minLength']">Minimum Length is
+                                6</small>
+                            <small *ngIf="loginForm.get('passWord')?.errors?.['pattern']">Pattern Ex:
+                                Gauri{{sign}}9</small>
+                        </div>
+                        <button class="submit" type="submit">Submit</button>
+                    </form>
+                    <br>
+                    <button routerLink="/register" class="ankerSubmit" type="submit">Don't have an Account?
+                        Register Here</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
